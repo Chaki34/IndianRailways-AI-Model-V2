@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+
+# Trained artifacts (regenerate with `python -m src.train`)
+models/*.pkl
+models/plots/
+!models/.gitkeep

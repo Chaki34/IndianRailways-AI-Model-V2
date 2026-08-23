@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Railway Maintenance Duration Prediction</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Maintenance Scheduling</h1>
+    <p class="subtitle">Model A &mdash; AI Maintenance Duration Prediction (prototype)</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Predict Maintenance Duration</h2>
+      <form id="predict-form">
+        <div class="field">
+          <label for="department">Department</label>
+          <select id="department" required>
+            <option value="Track">Track</option>
+            <option value="Traction">Traction</option>
+            <option value="Signal">Signal</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="asset_type">Asset Type</label>
+          <input id="asset_type" type="text" placeholder="e.g. Track Circuit" required>
+        </div>
+
+        <div class="field">
+          <label for="maintenance_type">Maintenance Type</label>
+          <input id="maintenance_type" type="text" placeholder="e.g. Rail Repair" required>
+        </div>
+
+        <div class="field">
+          <label for="section_id">Section ID</label>
+          <input id="section_id" type="text" placeholder="e.g. SEC0007" required>
+        </div>
+
+        <div class="field">
+          <label for="traffic_density">Traffic Density</label>
+          <select id="traffic_density" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="risk_level">Risk Level</label>
+          <select id="risk_level" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Critical">Critical</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="severity">Severity (1-10)</label>
+          <input id="severity" type="number" min="1" max="10" value="5" required>
+        </div>
+
+        <div class="field">
+          <label for="criticality_score">Criticality (1-10)</label>
+          <input id="criticality_score" type="number" min="1" max="10" step="0.1" value="5" required>
+        </div>
+
+        <div class="field">
+          <label for="urgency_score">Urgency (1-10)</label>
+          <input id="urgency_score" type="number" min="1" max="10" value="5" required>
+        </div>
+
+        <div class="field">
+          <label for="safety_risk_score">Safety Risk (1-10)</label>
+          <input id="safety_risk_score" type="number" min="1" max="10" value="5" required>
+        </div>
+
+        <div class="field">
+          <label for="asset_age_years">Asset Age (years)</label>
+          <input id="asset_age_years" type="number" min="0" step="0.1" value="10" required>
+        </div>
+
+        <div class="field">
+          <label for="condition_score">Condition Score (0-100)</label>
+          <input id="condition_score" type="number" min="0" max="100" value="70" required>
+        </div>
+
+        <div class="field">
+          <label for="overdue_days">Overdue Days</label>
+          <input id="overdue_days" type="number" min="0" value="0" required>
+        </div>
+
+        <div class="field">
+          <label for="estimated_duration_hours">Planner's Estimated Duration (hours)</label>
+          <input id="estimated_duration_hours" type="number" min="0.1" step="0.1" value="2.5" required>
+        </div>
+
+        <button type="submit">Predict Maintenance Duration</button>
+      </form>
+    </section>
+
+    <section class="card result" id="result-card" hidden>
+      <h2>Estimated Maintenance Duration</h2>
+      <div class="result-hours" id="result-hours">-- HOURS</div>
+      <div class="result-human" id="result-human"></div>
+      <div class="result-range" id="result-range"></div>
+    </section>
+
+    <div id="error-box" class="error" hidden></div>
+  </main>
+
+  <footer>
+    <p>SIH 2026 &mdash; Indian Railways Smart Maintenance Scheduling &mdash; Model A prototype only. Not connected to live production systems.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
