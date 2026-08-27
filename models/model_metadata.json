@@ -1,7 +1,7 @@
 {
   "model_name": "railway_maintenance_duration_predictor",
   "model_backend": "xgboost.XGBRegressor",
-  "training_date": "2026-08-24T01:00:25.778160",
+  "training_date": "2026-08-27T14:25:36.191623",
   "dataset_path": "C:\\Users\\debma\\Downloads\\railway-maintenance-ai_v2\\railway-maintenance-ai-v2\\data\\historical_training_dataset.csv",
   "dataset_row_count": 30000,
   "feature_names": [

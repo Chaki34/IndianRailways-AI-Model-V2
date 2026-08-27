@@ -70,13 +70,13 @@ SAMPLE_RECORD = {
     "traffic_density": "High",
     "risk_level": "High",
     "section_id": "SEC0007",
-    "asset_age_years": 12,
+    "asset_age_years": 20,
     "condition_score": 45,
     "severity": 7,
     "criticality_score": 8.2,
-    "urgency_score": 6,
+    "urgency_score": 10,
     "safety_risk_score": 7,
-    "overdue_days": 3,
+    "overdue_days": 10,
     "estimated_duration_hours": 3.0,
 }
 
